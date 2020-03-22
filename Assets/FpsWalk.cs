@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +8,14 @@ public class FpsWalk : MonoBehaviour
     Vector3 playerRotAxis;
     Vector3 headRotAxis;
     public CharacterController charac;
-    public GameObject prefabProjectile;
     public GameObject head;
+    public GameObject [] prefabObjeto = new GameObject[9];
+    public GameObject selected;
+   
     // Start is called before the first frame update
     void Start()
     {
+        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -30,10 +33,21 @@ public class FpsWalk : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject ball = Instantiate(prefabProjectile, transform.position+head.transform.forward, transform.rotation);
+            GameObject ball = Instantiate(selected, transform.position+head.transform.forward, transform.rotation);
             ball.GetComponent<Rigidbody>().AddForce(head.transform.forward * 1000+ Vector3.up*200);
             ball.GetComponent<Rigidbody>().AddRelativeTorque(Vector3.right*500, ForceMode.Impulse);
             Destroy(ball, 3);
         }
+
+        if(Input.GetKey(KeyCode.Alpha1)) { selected = prefabObjeto[0]; }
+        if (Input.GetKey(KeyCode.Alpha2)) { selected = prefabObjeto[1]; }
+        if (Input.GetKey(KeyCode.Alpha3)) { selected = prefabObjeto[2]; }
+        if (Input.GetKey(KeyCode.Alpha4)) { selected = prefabObjeto[3]; }
+        if (Input.GetKey(KeyCode.Alpha5)) { selected = prefabObjeto[4]; }
+        if (Input.GetKey(KeyCode.Alpha6)) { selected = prefabObjeto[5]; }
+        if (Input.GetKey(KeyCode.Alpha7)) { selected = prefabObjeto[6]; }
+        if (Input.GetKey(KeyCode.Alpha8)) { selected = prefabObjeto[7]; }
+        if (Input.GetKey(KeyCode.Alpha9)) { selected = prefabObjeto[8]; }
+
     }
 }

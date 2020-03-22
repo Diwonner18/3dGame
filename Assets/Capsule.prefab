@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6057504521127446387}
   - component: {fileID: 6057504521127446386}
   - component: {fileID: 6057504521127446389}
+  - component: {fileID: 3237700568924865131}
   - component: {fileID: 6057504521127446388}
-  - component: {fileID: 6057504521127446384}
   - component: {fileID: 6057504521127446385}
   m_Layer: 0
   m_Name: Capsule
@@ -83,6 +83,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3237700568924865131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057504521127446391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f070ebe861541e343b43823141254c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charac: {fileID: 0}
+  head: {fileID: 0}
+  prefabObjeto:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  selected: {fileID: 0}
 --- !u!136 &6057504521127446388
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -97,22 +122,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6057504521127446384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6057504521127446391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f070ebe861541e343b43823141254c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charac: {fileID: 6057504521127446385}
-  prefabProjectile: {fileID: 8401750974254938247, guid: ed4ef990339ce1145b6f2d6375036a5b,
-    type: 3}
-  head: {fileID: 6057504521267356111}
 --- !u!143 &6057504521127446385
 CharacterController:
   m_ObjectHideFlags: 0
